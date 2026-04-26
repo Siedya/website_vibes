@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Shipbuilding Process</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center center/cover;
+}
+
+/* Overlay */
+body::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(5, 20, 40, 0.2);
+    z-index: 0;
+}
+
+header, footer, .main {
+    position: relative;
+    z-index: 1;
+}
+
+/* HEADER (NAV BAR) */
+header {
+    background: #08162a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+}
+
+/* Title */
+.logo {
+    font-size: 1.4em;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Nav buttons */
+.nav {
+    display: flex;
+    gap: 15px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 0.9em;
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+/* Hover effect */
+.nav a:hover {
+    background: rgba(255,255,255,0.15);
+}
+
+/* FOOTER */
+footer {
+    background: #08162a;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.8em;
+}
+
+/* MAIN LAYOUT */
+.main {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 15px;
+    padding: 15px;
+}
+
+/* SIDEBAR */
+.sidebar {
+    background: rgba(0,0,0,0.4);
+    border-radius: 12px;
+    padding: 15px;
+    backdrop-filter: blur(6px);
+}
+
+.sidebar h2 {
+    margin-bottom: 10px;
+    color: #a8ddff;
+}
+
+.step {
+    margin-bottom: 12px;
+    font-size: 0.9em;
+}
+
+/* CONTENT */
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 15px;
+}
+
+/* CARDS */
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 15px;
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.18);
+}
+
+.card h2 {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    color: #a8ddff;
+}
+
+.card p {
+    font-size: 0.85em;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Shipbuilding</div>
+
+    <div class="nav">
+        <a href="#">Companies</a>
+        <a href="#">Buy Ship</a>
+        <a href="#">Workshops</a>
+        <a href="#">Contact</a>
+    </div>
+</header>
+
+<div class="main">
+
+    <div class="sidebar">
+        <h2>Step-by-Step</h2>
+        <div class="step"><strong>1.</strong> Design the ship</div>
+        <div class="step"><strong>2.</strong> Gather materials</div>
+        <div class="step"><strong>3.</strong> Build the keel</div>
+        <div class="step"><strong>4.</strong> Construct hull</div>
+        <div class="step"><strong>5.</strong> Install systems</div>
+        <div class="step"><strong>6.</strong> Test & launch</div>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <h2>Steel</h2>
+            <p>Steel is the primary material for modern ships due to its strength and durability.</p>
+        </div>
+
+        <div class="card">
+            <h2>Wood</h2>
+            <p>Traditionally used in shipbuilding, still used in small boats and interiors.</p>
+        </div>
+
+        <div class="card">
+            <h2>Aluminum</h2>
+            <p>Lightweight and corrosion-resistant, ideal for high-speed vessels.</p>
+        </div>
+
+        <div class="card">
+            <h2>Fiberglass</h2>
+            <p>Strong, lightweight, and easy to shape for modern boats.</p>
+        </div>
+
+        <div class="card">
+            <h2>Engines</h2>
+            <p>Provide propulsion and power essential ship systems.</p>
+        </div>
+
+        <div class="card">
+            <h2>Coatings</h2>
+            <p>Protect ships from corrosion and marine damage.</p>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Shipbuilding Overview
+</footer>
+
+</body>
+</html>
